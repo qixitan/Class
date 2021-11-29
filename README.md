@@ -1,2 +1,2 @@
 # Classes
-The base model of Classification
+some basic model of Classification
