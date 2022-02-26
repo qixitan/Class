@@ -3,7 +3,9 @@ some basic model of Classification
 
 envs：{
 python > 3.7
-torch ) 1.9.0
+
+torch > 1.9.0
+
 }
 
 
