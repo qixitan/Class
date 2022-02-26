@@ -1,11 +1,10 @@
 # Classes
 some basic model of Classification
 
-envs：{
+envs：
+{
 python > 3.7
-
 torch > 1.9.0
-
 }
 
 
