@@ -1,13 +1,21 @@
+# !/usr/bin/python3.8
+# -*- coding: utf-8 -*-
+# @Author: qixitan
+# @Email: qixitan@qq.com
+# @FileName: trainer.py
+# @Time: 2022/3/1 14:24
 import torch
 import torch.nn as nn
 
+import torch.backends.cudnn as cudnn
 import os
 import datetime
 
-def train(net, train_loader, test_loader, num_epochs, lr): 
+
+def train(net, train_loader, test_loader, num_epochs, lr, batch_size):
     net = nn.DataParallel(net)
     cudnn.benchmark = True
-    best_acc = 0 # 用以保存最好的模型结果
+    best_acc = 0  # 用以保存最好的模型结果
     loss_func = nn.CrossEntropyLoss()
     optimizer = torch.optim.SGD(
         net.parameters(), lr=lr, momentum=0.9, weight_decay=5e-4
@@ -32,7 +40,7 @@ def train(net, train_loader, test_loader, num_epochs, lr):
             train_corrent += (pred==label).sum()
         end_time = datetime.datetime.now()
         train_batch_time = (end_time-start_time).seconds / len(train_loader.dataset) * batch_size # 每个batch_size训练时间
-        train_acc  = train_corrent / len(train_loader.dataset) * 100.
+        train_acc = train_corrent / len(train_loader.dataset) * 100.
         #############测试################
         net.eval()
         start_time = datetime.datetime.now()
