@@ -12,7 +12,7 @@ class BasicBlock(nn.Module):
     expansion = 1
 
     def __init__(self, inplanes, planes, stride=1):
-        super().__init__()
+        super(BasicBlock, self).__init__()
         self.act = nn.ReLU(inplace=True)
         self.conv1 = nn.Conv2d(
             inplanes, planes, kernel_size=3, stride=stride, padding=1, bias=False,
@@ -47,7 +47,7 @@ class Bottleneck(nn.Module):
     expansion = 4
 
     def __init__(self, inplanes, planes, stride=1):
-        super().__init__()
+        super(Bottleneck,self).__init__()
         self.act = nn.ReLU(inplace=True)
         self.conv1 = nn.Conv2d(
             inplanes, planes, kernel_size=1, bias=False
@@ -83,7 +83,7 @@ class Bottleneck(nn.Module):
 
 class ResNet(nn.Module):
     def __init__(self, block, num_blocks, num_classes=1000):
-        super().__init__()
+        super(ResNet,self).__init__()
         self.inplanes = 64
         self.stem = nn.Sequential(
             nn.Conv2d(3, 64, kernel_size=7, stride=2, padding=3, bias=False),
