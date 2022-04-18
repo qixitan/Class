@@ -65,3 +65,9 @@ def train(net, train_loader, test_loader, num_epochs, lr, batch_size):
                 os.mkdir("cifar10_resnet_checkpoint")
             torch.save(state, "./cifar10_resnet_checkpoint/best_ckpt.pth")
             best_acc = test_acc
+
+
+
+
+
+
