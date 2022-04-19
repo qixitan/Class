@@ -22,19 +22,23 @@ class BaseExp(metaclass=ABCMeta):
         pass
 
     @abstractmethod
-    def get_data_loader(self, batch_size: int) ->(torch.utils.data.DataLoader, torch.utils.data.DataLoader):
+    def get_data_loader(self, batch_size: int) ->torch.utils.data.DataLoader:
         pass
 
     @abstractmethod
-    def get_optimizer(self, batch_size: int) -> torch.optim.Optimizer:
+    def get_optimizer(self, lr: float) -> torch.optim.Optimizer:
         pass
 
     @abstractmethod
-    def get_lr_scheduler(self, lr, iters_per_epoch):
+    def get_lr_scheduler(self, **kwargs):
         pass
 
     @abstractmethod
-    def get_evaluator(self):
+    def get_loss_func(self):
+        pass
+
+    @abstractmethod
+    def get_val_loader(self, batch_size: int):
         pass
 
 

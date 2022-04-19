@@ -5,6 +5,7 @@
 # @FileName: train.py
 # @Time: 2022/4/18 13:55
 
+from loguru import logger
 import argparse
 from model.exp import build
 from model.core import Trainer
@@ -25,12 +26,13 @@ def make_parser():
         "-exp", "--expname", dest="exp", type=str, default="ResNet18_cifar10", help="model is used in train"
     )
     parser.add_argument(
-        "-b", "--batch-size", dest="BatchSize", type=int, default=8, help="batch size of your date"
+        "-b", "--batch-size", dest="batch_size", type=int, default=256, help="batch size of your date"
     )
 
     return parser
 
 
+@logger.catch
 def main(exp, args):
     trainer = Trainer(exp, args)
     trainer.train()
@@ -39,5 +41,4 @@ def main(exp, args):
 if __name__ == '__main__':
     args = make_parser().parse_args()
     exp = build.get_exp(args.exp)
-    # print(exp.max_epoch)
     main(exp, args)

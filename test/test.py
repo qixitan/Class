@@ -11,6 +11,7 @@ import torch
 import torchvision
 from torchvision import transforms
 from model import *
+import argparse
 
 
 # net = ResNet18()
@@ -18,7 +19,21 @@ from model import *
 # y = net(x)
 # # print(y.shape)
 print()
-from model.exp.build import get_exp
-m = get_exp("ResNet18-cifar10")
-print(m.max_epoch)
+# from model.exp.build import get_exp
+# m = get_exp("ResNet18-cifar10")
+# print(m.max_epoch)
 print()
+
+from torch import distributed as dist
+
+
+def get_rank() -> int:
+    if not dist.is_available():
+        return 0
+    if not dist.is_initialized():
+        return 0
+    return dist.get_rank()
+
+
+print(get_rank())
+

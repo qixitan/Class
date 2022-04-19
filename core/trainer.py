@@ -13,6 +13,7 @@ import datetime
 
 
 def train(net, train_loader, test_loader, num_epochs, lr, batch_size):
+    # before_train
     net = nn.DataParallel(net)
     cudnn.benchmark = True
     best_acc = 0  # 用以保存最好的模型结果
@@ -24,9 +25,11 @@ def train(net, train_loader, test_loader, num_epochs, lr, batch_size):
         optimizer, T_max=num_epochs
     )
     for epoch in range(num_epochs):
+        # before_train_one_epoch
         net.train()
         train_loss, train_corrent, test_corrent = 0, 0, 0
         start_time = datetime.datetime.now()
+        # train_in_epoch
         for i, data in enumerate(train_loader):
             img, label = data
             img, label = img.cuda(), label.cuda()
@@ -37,10 +40,12 @@ def train(net, train_loader, test_loader, num_epochs, lr, batch_size):
             optimizer.step()
             train_loss += loss.item()
             _, pred = torch.max(outputs, 1)
-            train_corrent += (pred==label).sum()
+            train_corrent += (pred == label).sum()
+        # after_train_one_epoch
         end_time = datetime.datetime.now()
         train_batch_time = (end_time-start_time).seconds / len(train_loader.dataset) * batch_size # 每个batch_size训练时间
         train_acc = train_corrent / len(train_loader.dataset) * 100.
+
         #############测试################
         net.eval()
         start_time = datetime.datetime.now()
@@ -49,7 +54,7 @@ def train(net, train_loader, test_loader, num_epochs, lr, batch_size):
             img, label = img.cuda(), label.cuda()
             outputs = net(img)
             _, pred = torch.max(outputs, 1)
-            test_corrent += (pred==label).sum()
+            test_corrent += (pred == label).sum()
         end_time = datetime.datetime.now()
         test_batch_time = (end_time-start_time).seconds / len(test_loader.dataset) * batch_size
         test_acc = test_corrent / len(test_loader.dataset) * 100.
