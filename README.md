@@ -10,7 +10,7 @@ Upload function of separate training set and validation set  -- use the duplicat
 ##### 2022/3/3  
 Supplement vgg. googlenet, densenet classification model,and We will continue to update the classification model
 ##### 2022/4/18 
-We will make a classification-based project showing the basic content of a project, including building data, model creation, training process, and related log files
+We will make a classification-based project showing the basic content of a project, including building dataset, Build the model, training process, and related log files
 ##### 2022/4/19 
 The overall framework of the project is completed, and the data and model-related details can be defined by defining the overall content of the model and data in model.exp. And create an exp file in exps to achieve fine adjustment such as parameter adjustment. Training the model can be done through tools.train, just change the exp in tools.train to the exp file name in exps.default, for example, exps.default.ResNet18_cifar10 just need to set exp to ResNet18_cifar10;
 The batch_size setting can be determined according to your GPU memory。
