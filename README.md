@@ -32,5 +32,7 @@ After downloading the dataset, extract it to the data file. The file directory i
 
 >>>tulip
 
+In addition to supplement the ViT。
+
 
 #### *Note:* If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com
