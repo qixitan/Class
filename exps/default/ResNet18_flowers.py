@@ -5,7 +5,7 @@
 # @FileName: ResNet18_cifar10.py
 # @Time: 2022/4/18 18:43
 
-from model.exp import cifar10 as MyExp
+from model.exp import Flowers as MyExp
 
 
 class Exp(MyExp):

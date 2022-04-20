@@ -7,7 +7,6 @@
 
 from .base_exp import BaseExp
 import os
-import torchvision
 import torch
 
 
@@ -16,7 +15,7 @@ class Exp(BaseExp):
         super().__init__()
 
         # ---------------- model config ---------------- #
-        self.num_classes = 10
+        self.num_classes = 5
 
         # ---------------- dataloader config ---------------- #
         self.data_num_workers = 4
@@ -32,20 +31,16 @@ class Exp(BaseExp):
         self.exp_name = os.path.split(os.path.realpath(__file__))[1].split(".")[0]   # ?????  好像没用啊
 
         # -----------------  testing config ------------------ #
-        self.test_size = (32, 32)
+        self.test_size = (224, 224)
 
     def get_model(self):
         from ..ResNet import ResNet18
-        from ..stem import stem
         self.model = ResNet18(self.num_classes)
-        self.model.stem = stem
         return self.model
 
     def get_data_loader(self, batch_size: int):
-        from model.data import transform
-        data_file = "/"+"/".join(os.path.abspath(__file__).split("/")[1:6]) + "/data"
-        train_set = torchvision.datasets.CIFAR10(root=data_file, train=True,
-                                                 transform=transform.cifar_transform["train"])
+        from model.data.dataset import FlowersDataset
+        train_set = FlowersDataset(set_name="flowers", size=self.test_size, train=True)
 
         # train_sampler = torch.utils.data.SequentialSampler(train_set)
         train_loader = torch.utils.data.DataLoader(
@@ -54,11 +49,8 @@ class Exp(BaseExp):
         return train_loader
 
     def get_val_loader(self, batch_size: int):
-        from model.data import transform
-        data_file = "/" + "/".join(os.path.abspath(__file__).split("/")[1:6]) + "/data"
-
-        val_set = torchvision.datasets.CIFAR10(root=data_file, train=False,
-                                               transform=transform.cifar_transform["val"])
+        from model.data.dataset import FlowersDataset
+        val_set = FlowersDataset(set_name="flowers", size=self.test_size, train=False)
         # val_sampler = torch.utils.data.SequentialSampler(val_set)
         val_loader = torch.utils.data.DataLoader(
             val_set, batch_size=batch_size, shuffle=False, num_workers=self.data_num_workers, pin_memory=True)

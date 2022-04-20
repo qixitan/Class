@@ -7,4 +7,5 @@
 
 from .base_exp import BaseExp
 from .build import get_exp
-from .cifar10_base import Exp
+from .cifar10_base import Exp as cifar10
+from .flower_base import Exp as Flowers
