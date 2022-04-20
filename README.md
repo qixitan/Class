@@ -8,7 +8,7 @@ Uploaded the classification file of resnet18 to CIFAR10 in exps.train_cifar10
 ##### 2022/2/26 
 Upload function of separate training set and validation set  -- use the duplicated dataset class to implement training set, validation set separation and dataset creation after 2022/4/20
 ##### 2022/3/3  
-Supplement vgg. googlenet, densenet classification model,and We will continue to update the classification model
+Supplement Vgg. GoogLeNet, DenseNet and ConvNet,and We will continue to update the classification model,**But GoogLeNet and ConvNext can't be called yet, we will fix it later**.
 ##### 2022/4/18 
 We will make a classification-based project showing the basic content of a project, including building dataset, Build the model, training process, and related log files
 ##### 2022/4/19 
