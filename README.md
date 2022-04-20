@@ -2,7 +2,7 @@
 some basic model of Classification
 
 envs：python==3.8 torch>=1.8.1
-
+# Note: If you have any questions, please send an email to qixitan@qq.com
 
 ##### 2022/2/9 
 上传了resnet18对CIFAR10的分类文件
