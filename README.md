@@ -1,8 +1,8 @@
 # *Classification*
-some basic model of Classification
+####### some basic model of Classification
 envs：python==3.8 torch>=1.8.1 GPU:NVIDIA RTX1080Ti
-# Note: If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com
-#### *****Project Process*****
+# *Note:* If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com
+#### *Project Process*
 ##### 2022/2/9 
 Uploaded the classification file of resnet18 to CIFAR10 in exps.train_cifar10
 ##### 2022/2/26 
