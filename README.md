@@ -1,26 +1,24 @@
 # Classification
 some basic model of Classification
-
-envs：python==3.8 torch>=1.8.1
-# Note: If you have any questions, please send an email to qixitan@qq.com
-
+envs：python==3.8 torch>=1.8.1 GPU:NVIDIA RTX1080Ti
+# Note: If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com
+# Project Process
 ##### 2022/2/9 
-上传了resnet18对CIFAR10的分类文件
+Uploaded the classification file of resnet18 to CIFAR10 in exps.train_cifar10
 ##### 2022/2/26 
-上传分离训练集和验证集函数--在2022/4/20之后使用复写的dataset类实现训练集、验证集分离以及dataset创建
+Upload function of separate training set and validation set  -- use the duplicated dataset class to implement training set, validation set separation and dataset creation after 2022/4/20
 ##### 2022/3/3  
-重新整理 并增加了vgg。googlenet、densenet。
+Supplement vgg. googlenet, densenet classification model,and We will continue to update the classification model
 ##### 2022/4/18 
-持续更新 打算做成一个开源的以图像分类为例子 展示一个项目的基本内容  
+We will make a classification-based project showing the basic content of a project, including building data, model creation, training process, and related log files
 ##### 2022/4/19 
-继续更新 现在可以通过tools.train 直接运行  其他使用其他模型可以在model.exp中根据自己需要复写的使用自己数据集和模型类就可以了
+The overall framework of the project is completed, and the data and model-related details can be defined by defining the overall content of the model and data in model.exp. And create an exp file in exps to achieve fine adjustment such as parameter adjustment. Training the model can be done through tools.train, just change the exp in tools.train to the exp file name in exps.default, for example, exps.default.ResNet18_cifar10 just need to set exp to ResNet18_cifar10;
+The batch_size setting can be determined according to your GPU memory。
 ##### 2022/4/20
-新增了以预测花的类别为例子的dataset 在model.data.dataset.flowers_set中实现了dataset类
-并重写了以ResNet18为例子的Exp函数包括在model.exp.flower_base以及exps.default.ResNet18_flowers
-训练可直接通过修改tools.train中exp修改为ResNet18_flowers、batch_size可根据自己GPU内存大小调整 本人使用1080Ti可设置为128
-
-数据集下载地址为：https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
-数据集下载后解压到data文件下即可 文件目录如下
+Added a dataset with the predicted flower category as an example: Implemented the dataset class in model.data.dataset.flowers_set, and rewrote the Exp function taking ResNet18 as an example to include in model.exp.flower_base and exps.default.ResNet18_flowers
+Training can be directly modified by modifying the exp in tools.train to ResNet18_flowers, and batch_size can be adjusted according to the size of your GPU memory. I use 1080Ti and can set it to 128
+You can download data from: https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
+After downloading the dataset, extract it to the data file. The file directory is as follows:
 >data
 >>flowers
 
