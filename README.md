@@ -4,7 +4,7 @@ some basic model of Classification
 envs：
 {
 python==3.8
-torch==1.9.1
+torch>=1.8.1
 }
 
 
