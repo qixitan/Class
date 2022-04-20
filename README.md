@@ -1,4 +1,4 @@
-# Classification
+# *Classification*
 some basic model of Classification
 envs：python==3.8 torch>=1.8.1 GPU:NVIDIA RTX1080Ti
 # Note: If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com
