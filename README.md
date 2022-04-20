@@ -1,11 +1,7 @@
 # Classification
 some basic model of Classification
 
-envs：
-{
-python==3.8
-torch>=1.8.1
-}
+envs：python==3.8 torch>=1.8.1
 
 
 ##### 2022/2/9 
