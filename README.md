@@ -27,8 +27,13 @@ torch==1.9.1
 数据集下载后解压到data文件下即可 文件目录如下
 >data
 >>flowers
+
 >>>daisy
+
 >>>daandelion
+
 >>>rose
+
 >>>sunflower
+
 >>>tulip
