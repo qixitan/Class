@@ -38,10 +38,14 @@ After downloading the dataset, extract it to the data file. The file directory i
 Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives some parameters of the model
 <table>
 	<tr>
-	  <td></td>
-	  <td></td>
-	  <td></td>
-	  <td></td>
+	  <td>model_name</td>
+	  <td>Params size (MB)</td>
+	  <td>Image size</td>
+	</tr>
+	<tr>
+	  <td>resnet18</td>
+	  <td>44.59 (MB)</td>
+	  <td>(224, 224)</td>
 	</tr>
 </table>
 
