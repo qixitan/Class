@@ -39,6 +39,9 @@ Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives 
 <table>
 	<tr>
 	  <td></td>
+	  <td></td>
+	  <td></td>
+	  <td></td>
 	</tr>
 </table>
 
