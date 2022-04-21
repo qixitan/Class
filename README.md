@@ -32,6 +32,15 @@ After downloading the dataset, extract it to the data file. The file directory i
 
 >>>tulip
 
+|-data
+|  |
+|  |-flowers
+|       |-daisy
+|       |-daandelion
+|       |-rose
+|       |-sunflower
+|       |-tulip
+
   In addition to supplement the ViT。
   
 ##### 2020/4/21
