@@ -94,7 +94,7 @@ Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives 
 	</tr>
 	<tr>
 	  <td>vgg16_bn</td>
-	  <td> 507.82 </td>
+	  <td> 527.82 </td>
 	  <td>(224, 224)</td>
 	</tr>
 	<tr>
