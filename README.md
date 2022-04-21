@@ -35,7 +35,7 @@ After downloading the dataset, extract it to the data file. The file directory i
   In addition to supplement the ViT。
   
 ##### 2020/4/21
-Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives some parameters of the model
+Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives some parameters of the model(The values in parentheses are expressed as pytorch official data) as follow.
 <table>
 	<tr>
 	  <td>model_name</td>
@@ -49,8 +49,74 @@ Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives 
 	</tr>
 	<tr>
 	  <td>resnet34</td>
-	  <td> 44.59 </td>
+	  <td> 83.15 </td>
 	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>resnet50</td>
+	  <td> 97.49 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>resnet101</td>
+	  <td> 169.94 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>resnet152</td>
+	  <td> 229.62 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg11</td>
+	  <td> 506.83 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg11_bn</td>
+	  <td> 506.85 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg13</td>
+	  <td> 507.54 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg13_bn</td>
+	  <td> 507.56 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg16</td>
+	  <td> 527.79 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg16_bn</td>
+	  <td> 507.82 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg19</td>
+	  <td> 548.05 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>vgg19_bn</td>
+	  <td> 548.09 </td>
+	  <td>(224, 224)</td>
+	 </tr>
+	 <tr>
+	   <td>GoogLeNet</td>
+	   <td> 27.86(49.61) </td>
+	   <td>(224, 224)</td>
+	  </tr>
+	  <tr>
+	   <td>DenseNet121</td>
+	   <td> 41.47 </td>
+	   <td>(224, 224)</td>
+	  </tr>
 	</tr>
 </table>
 
