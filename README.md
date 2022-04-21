@@ -44,7 +44,12 @@ Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives 
 	</tr>
 	<tr>
 	  <td>resnet18</td>
-	  <td>44.59 (MB)</td>
+	  <td> 44.59 </td>
+	  <td>(224, 224)</td>
+	</tr>
+	<tr>
+	  <td>resnet34</td>
+	  <td> 44.59 </td>
 	  <td>(224, 224)</td>
 	</tr>
 </table>
