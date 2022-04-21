@@ -36,6 +36,10 @@ After downloading the dataset, extract it to the data file. The file directory i
   
 ##### 2020/4/21
 Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives some parameters of the model
-
+<table>
+	<tr>
+	  <td></td>
+	</tr>
+</table>
 
 #### *Note:* If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com
