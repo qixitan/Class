@@ -32,7 +32,7 @@ class PatchEmbedding(nn.Module):
 
 
 class MultiHeadAttention(nn.Module):
-    def __init__(self, emb_size: int = 768, num_heads: int = 8, dropout: float = 0):
+    def __init__(self, emb_size: int = 768, num_heads: int = 12, dropout: float = 0):
         super(MultiHeadAttention, self).__init__()
         self.emb_size = emb_size
         self.num_heads = num_heads
@@ -85,6 +85,7 @@ class FeedForwardBlock(nn.Sequential):  # 直接继承nn.Sequential 避免重复
 class TransformerEncoderBlock(nn.Sequential):
     def __init__(self,
                  emb_size: int = 768,
+                 num_heads: int = 12,
                  drop_p: float = 0.,
                  forward_expansion: int = 4,
                  forward_drop_p: float = 0.,
@@ -92,7 +93,7 @@ class TransformerEncoderBlock(nn.Sequential):
         super().__init__(
             ResidualAdd(nn.Sequential(
                 nn.LayerNorm(emb_size),
-                MultiHeadAttention(emb_size, **kwargs),
+                MultiHeadAttention(emb_size, num_heads, **kwargs),
                 nn.Dropout(drop_p)
             )),
             ResidualAdd(nn.Sequential(
@@ -105,8 +106,8 @@ class TransformerEncoderBlock(nn.Sequential):
 
 
 class TransformerEncoder(nn.Sequential):
-    def __init__(self, depth: int = 12, **kwargs):
-        super().__init__(*[TransformerEncoderBlock(**kwargs) for _ in range(depth)])
+    def __init__(self, depth: int = 12, num_heads: int = 8, **kwargs):
+        super().__init__(*[TransformerEncoderBlock(num_heads=num_heads, **kwargs) for _ in range(depth)])
 
 
 class ClassificationHead(nn.Sequential):
@@ -117,20 +118,70 @@ class ClassificationHead(nn.Sequential):
             nn.Linear(emb_size, n_classes))
 
 
-class ViT(nn.Sequential):
+class ViT_Ti(nn.Sequential):
     def __init__(self,
-                inplanes: int = 3,
-                patch_size: int = 16,
-                emb_size: int = 768,
-                img_size: int = 224,
-                depth: int = 12,
-                num_classes: int = 1000,
-                **kwargs):
+                 inplanes: int = 3,
+                 emb_size: int = 192,
+                 num_heads: int = 3,
+                 img_size: int = 224,
+                 depth: int = 12,
+                 patch_size: int = 16,
+                 num_classes: int = 1000,
+                 **kwargs):
         super().__init__(
             PatchEmbedding(inplanes, patch_size, emb_size, img_size),
-            TransformerEncoder(depth, emb_size=emb_size, **kwargs),
+            TransformerEncoder(depth, emb_size=emb_size, num_heads=num_heads, **kwargs),
             ClassificationHead(emb_size, num_classes)
         )
 
 
+class ViT_S(nn.Sequential):
+    def __init__(self,
+                 inplanes: int = 3,
+                 emb_size: int = 384,
+                 num_heads: int = 6,
+                 img_size: int = 224,
+                 depth: int = 12,
+                 patch_size: int = 16,
+                 num_classes: int = 1000,
+                 **kwargs):
+        super().__init__(
+            PatchEmbedding(inplanes, patch_size, emb_size, img_size),
+            TransformerEncoder(depth, emb_size=emb_size, num_heads=num_heads, **kwargs),
+            ClassificationHead(emb_size, num_classes)
+        )
+
+
+class ViT_B(nn.Sequential):
+    def __init__(self,
+                 inplanes: int = 3,
+                 emb_size: int = 768,
+                 num_heads: int = 12,
+                 img_size: int = 224,
+                 depth: int = 12,
+                 patch_size: int = 16,
+                 num_classes: int = 1000,
+                 **kwargs):
+        super().__init__(
+            PatchEmbedding(inplanes, patch_size, emb_size, img_size),
+            TransformerEncoder(depth, emb_size=emb_size, num_heads=num_heads, **kwargs),
+            ClassificationHead(emb_size, num_classes)
+        )
+
+
+class ViT_L(nn.Sequential):
+    def __init__(self,
+                 inplanes: int = 3,
+                 emb_size: int = 1024,
+                 num_heads: int = 16,
+                 img_size: int = 224,
+                 depth: int = 24,
+                 patch_size: int = 16,
+                 num_classes: int = 1000,
+                 **kwargs):
+        super().__init__(
+            PatchEmbedding(inplanes, patch_size, emb_size, img_size),
+            TransformerEncoder(depth, emb_size=emb_size, num_heads=num_heads, **kwargs),
+            ClassificationHead(emb_size, num_classes)
+        )
 

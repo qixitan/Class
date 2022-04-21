@@ -8,5 +8,6 @@ from .ResNet import ResNet18, ResNet34, ResNet50, ResNet101, ResNet152
 from .DenseNet import DenseNet121, DenseNet161, DenseNet169, DenseNet201
 from .Vgg import vgg11, vgg11_bn, vgg13, vgg13_bn, vgg16, vgg16_bn, vgg19, vgg19_bn
 from .GoogLeNet import GoogLeNet
-from .ViT import ViT
+from .ConvNext import ConvNeXt
+from .ViT import ViT_Ti, ViT_S, ViT_B, ViT_L
 from .stem import *
