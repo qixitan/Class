@@ -3,7 +3,7 @@ some basic model of Classification
  
 *envs：*python==3.8 torch>=1.8.0
  
-GPU:NVIDIA RTX1080Ti
+GPU: NVIDIA RTX1080Ti
 
 ## *Project Process*
 ##### 2022/2/9 
