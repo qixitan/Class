@@ -120,6 +120,26 @@ Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives 
 	   <td> 41.47 </td>
 	   <td>(224, 224)</td>
 	  </tr>
+	  <tr>
+	   <td>ViT_Ti</td>
+	   <td> 21.67 </td>
+	   <td>(224, 224)</td>
+	  </tr>
+	  <tr>
+	   <td>ViT_S</td>
+	   <td> 83.83 </td>
+	   <td>(224, 224)</td>
+	  </tr>
+	  <tr>
+	   <td>ViT_B</td>
+	   <td> 329.65 </td>
+	   <td>(224, 224)</td>
+	  </tr>
+	  <tr>
+	   <td>ViT_L</td>
+	   <td> 1160.14 </td>
+	   <td>(224, 224)</td>
+	  </tr>
 	</tr>
 </table>
 
