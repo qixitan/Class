@@ -18,7 +18,8 @@ The batch_size setting can be determined according to your GPU memory。
   Added a dataset with the predicted flower category as an example: Implemented the dataset class in model.data.dataset.flowers_set, and rewrote the Exp function taking ResNet18 as an example to include in model.exp.flower_base and exps.default.ResNet18_flowers.
   Training can be directly modified by modifying the exp in tools.train to ResNet18_flowers, and batch_size can be adjusted according to the size of your GPU memory. I use 1080Ti and can set it to 128
 You can download data from: https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
-After downloading the dataset, extract it to the data file. The file directory is as follows:
+After downloading the dataset, extract it to the data file. The file directory is as follows
+'''
 .
 │  flowers.txt
 │  
