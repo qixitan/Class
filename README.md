@@ -19,19 +19,17 @@ The batch_size setting can be determined according to your GPU memory。
   Training can be directly modified by modifying the exp in tools.train to ResNet18_flowers, and batch_size can be adjusted according to the size of your GPU memory. I use 1080Ti and can set it to 128
 You can download data from: https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
 After downloading the dataset, extract it to the data file. The file directory is as follows:
+
 '''
 .
-├─cifar-10-batches-py
-├─flowers
-│  ├─daisy
-│  ├─dandelion
-│  ├─rose
-│  ├─sunflower
-│  └─tulip
-└─img
-    └─hotmap
+│  
+└─flowers
+    ├─daisy
+    ├─dandelion
+    ├─rose
+    ├─sunflower
+    └─tulip
 '''
-
 
 >data
 >>flowers
