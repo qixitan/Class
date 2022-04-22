@@ -1,9 +1,11 @@
 # *Classification*
- some basic model of Classification
+some basic model of Classification
  
- envs：python==3.8 torch>=1.8.1 GPU:NVIDIA RTX1080Ti
+*envs：*python==3.8 torch>=1.8.0
+ 
+GPU:NVIDIA RTX1080Ti
 
-#### *Project Process*
+## *Project Process*
 ##### 2022/2/9 
  Uploaded the classification file of resnet18 to CIFAR10 in exps.train_cifar10
 ##### 2022/2/26 
