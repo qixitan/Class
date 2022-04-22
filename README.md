@@ -21,6 +21,7 @@ You can download data from: https://www.kaggle.com/datasets/alxmamaev/flowers-re
 After downloading the dataset, extract it to the data file. The file directory is as follows:
 '''
 .
+│  flowers.txt
 │  
 └─flowers
     ├─daisy
@@ -28,6 +29,7 @@ After downloading the dataset, extract it to the data file. The file directory i
     ├─rose
     ├─sunflower
     └─tulip
+
 
 >data
 >>flowers
