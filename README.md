@@ -38,7 +38,7 @@ After downloading the dataset, extract it to the data file. The file directory i
   In addition to supplement the ViT。
   
 ##### 2020/4/21
-Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives some parameters of the model(The values in parentheses are expressed as pytorch official data) as follow.
+Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives some parameters of the model(*The values in parentheses are expressed as pytorch official data*) as follow.
 <table>
 	<tr>
 	  <td>Model_Name</td>
@@ -143,4 +143,4 @@ Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives 
 	</tr>
 </table>
 
-#### *Note:* If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com
+#### **Note: If you have any questions, please send an email to qixitan@qq.com or tanqixi508@gmail.com**
