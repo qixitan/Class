@@ -21,17 +21,19 @@ You can download data from: https://www.kaggle.com/datasets/alxmamaev/flowers-re
 After downloading the dataset, extract it to the data file. The file directory is as follows:
 
 
-├─flowers
+├─data
 
-│  ├─daisy
+│  ├─flowers
 
-│  ├─dandelion
+│  │  ├─daisy
 
-│  ├─rose
+│  │  ├─dandelion
 
-│  ├─sunflower
+│  │  ├─rose
 
-│  └─tulip
+│  │  ├─sunflower
+
+│  │  └─tulip
 
   In addition to supplement the ViT。
   
