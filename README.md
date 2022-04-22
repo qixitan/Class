@@ -41,9 +41,9 @@ After downloading the dataset, extract it to the data file. The file directory i
 Updated various versions of ViT, such as ViT_Ti, ViT_S, ViT_B, ViT_L. and gives some parameters of the model(The values in parentheses are expressed as pytorch official data) as follow.
 <table>
 	<tr>
-	  <td>model_name</td>
-	  <td>Params size (MB)</td>
-	  <td>Image size</td>
+	  <td>Model_Name</td>
+	  <td>Params_Size (MB)</td>
+	  <td>Image_Size</td>
 	</tr>
 	<tr>
 	  <td>resnet18</td>
