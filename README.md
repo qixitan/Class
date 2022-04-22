@@ -20,16 +20,19 @@ The batch_size setting can be determined according to your GPU memory。
 You can download data from: https://www.kaggle.com/datasets/alxmamaev/flowers-recognition
 After downloading the dataset, extract it to the data file. The file directory is as follows:
 
-D:\PYCHARM2018\CLASSIFICATION\DATA
-├─cifar-10-batches-py
+
 ├─flowers
+
 │  ├─daisy
+
 │  ├─dandelion
+
 │  ├─rose
+
 │  ├─sunflower
+
 │  └─tulip
-└─img
-    └─hotmap
+
 
 >data
 >>flowers
