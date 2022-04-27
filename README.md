@@ -142,8 +142,10 @@ Added a dataset with the predicted flower category as an example: Implemented th
   In addition to supplement the ViT。
   
 ##### 2020/4/27
-Provide the calculation CAM module, put the CAM image to be calculated in the data/img folder, and call tools/get_cam to achieve
+Provide the calculation CAM module, put the CAM image to be calculated in the data/img folder, and call tools/get_cam to achieve.
+Examples are as follows:
 
+![image text](https://github.com/qixitan/Classification/blob/main/data/img/rose.jpg)
 ![image text](https://github.com/qixitan/Classification/blob/main/tools/ResNet18_flowers/layer4/rose_img_with_cam.jpg)
 
 Updated model save mode, corrected bug when reading training model
